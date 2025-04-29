@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <listingToolbar name="listing_top">
+        <massaction name="listing_massaction">
+            <!-- Custom Arabic statuses -->
+            <action name="change_status_preparingb">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="type" xsi:type="string">change_status_preparingb</item>
+                        <item name="label" xsi:type="string" translate="true">طباعة</item>
+                        <item name="url" xsi:type="url" path="magoarab_mass/order/massChangeStatus">
+                            <param name="status">preparingb</param>
+                        </item>
+                        <item name="confirm" xsi:type="array">
+                            <item name="title" xsi:type="string" translate="true">تغيير حالة الطلب</item>
+                            <item name="message" xsi:type="string" translate="true">هل أنت متأكد أنك تريد تغيير حالة الطلبات المحددة إلى طباعة؟</item>
+                        </item>
+                    </item>
+                </argument>
+            </action>
+            <action name="change_status_preparinga">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="type" xsi:type="string">change_status_preparinga</item>
+                        <item name="label" xsi:type="string" translate="true">جاري الشحن</item>
+                        <item name="url" xsi:type="url" path="magoarab_mass/order/massChangeStatus">
+                            <param name="status">preparinga</param>
+                        </item>
+                        <item name="confirm" xsi:type="array">
+                            <item name="title" xsi:type="string" translate="true">تغيير حالة الطلب</item>
+                            <item name="message" xsi:type="string" translate="true">هل أنت متأكد أنك تريد تغيير حالة الطلبات المحددة إلى جاري الشحن؟</item>
+                        </item>
+                    </item>
+                </argument>
+            </action>
+            <action name="change_status_deliveredtodayc">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="type" xsi:type="string">change_status_deliveredtodayc</item>
+                        <item name="label" xsi:type="string" translate="true">تم الشحن اليوم</item>
+                        <item name="url" xsi:type="url" path="magoarab_mass/order/massChangeStatus">
+                            <param name="status">deliveredtodayc</param>
+                        </item>
+                        <item name="confirm" xsi:type="array">
+                            <item name="title" xsi:type="string" translate="true">تغيير حالة الطلب</item>
+                            <item name="message" xsi:type="string" translate="true">هل أنت متأكد أنك تريد تغيير حالة الطلبات المحددة إلى تم الشحن اليوم؟</item>
+                        </item>
+                    </item>
+                </argument>
+            </action>
+            
+            <!-- Standard Magento statuses -->
+            <action name="change_status_pending">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="type" xsi:type="string">change_status_pending</item>
+                        <item name="label" xsi:type="string" translate="true">Status: Pending</item>
+                        <item name="url" xsi:type="url" path="magoarab_mass/order/massChangeStatus">
+                            <param name="status">pending</param>
+                        </item>
+                        <item name="confirm" xsi:type="array">
+                            <item name="title" xsi:type="string" translate="true">Change Order Status</item>
+                            <item name="message" xsi:type="string" translate="true">Are you sure you want to change status to Pending?</item>
+                        </item>
+                    </item>
+                </argument>
+            </action>
+            <action name="change_status_processing">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="type" xsi:type="string">change_status_processing</item>
+                        <item name="label" xsi:type="string" translate="true">Status: Processing</item>
+                        <item name="url" xsi:type="url" path="magoarab_mass/order/massChangeStatus">
+                            <param name="status">processing</param>
+                        </item>
+                        <item name="confirm" xsi:type="array">
+                            <item name="title" xsi:type="string" translate="true">Change Order Status</item>
+                            <item name="message" xsi:type="string" translate="true">Are you sure you want to change status to Processing?</item>
+                        </item>
+                    </item>
+                </argument>
+            </action>
+            <action name="change_status_complete">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="type" xsi:type="string">change_status_complete</item>
+                        <item name="label" xsi:type="string" translate="true">Status: Complete</item>
+                        <item name="url" xsi:type="url" path="magoarab_mass/order/massChangeStatus">
+                            <param name="status">complete</param>
+                        </item>
+                        <item name="confirm" xsi:type="array">
+                            <item name="title" xsi:type="string" translate="true">Change Order Status</item>
+                            <item name="message" xsi:type="string" translate="true">Are you sure you want to change status to Complete?</item>
+                        </item>
+                    </item>
+                </argument>
+            </action>
+            <action name="change_status_closed">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="type" xsi:type="string">change_status_closed</item>
+                        <item name="label" xsi:type="string" translate="true">Status: Closed</item>
+                        <item name="url" xsi:type="url" path="magoarab_mass/order/massChangeStatus">
+                            <param name="status">closed</param>
+                        </item>
+                        <item name="confirm" xsi:type="array">
+                            <item name="title" xsi:type="string" translate="true">Change Order Status</item>
+                            <item name="message" xsi:type="string" translate="true">Are you sure you want to change status to Closed?</item>
+                        </item>
+                    </item>
+                </argument>
+            </action>
+            <action name="change_status_canceled">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="type" xsi:type="string">change_status_canceled</item>
+                        <item name="label" xsi:type="string" translate="true">Status: Canceled</item>
+                        <item name="url" xsi:type="url" path="magoarab_mass/order/massChangeStatus">
+                            <param name="status">canceled</param>
+                        </item>
+                        <item name="confirm" xsi:type="array">
+                            <item name="title" xsi:type="string" translate="true">Change Order Status</item>
+                            <item name="message" xsi:type="string" translate="true">Are you sure you want to change status to Canceled?</item>
+                        </item>
+                    </item>
+                </argument>
+            </action>
+            <action name="change_status_holded">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="type" xsi:type="string">change_status_holded</item>
+                        <item name="label" xsi:type="string" translate="true">Status: On Hold</item>
+                        <item name="url" xsi:type="url" path="magoarab_mass/order/massChangeStatus">
+                            <param name="status">holded</param>
+                        </item>
+                        <item name="confirm" xsi:type="array">
+                            <item name="title" xsi:type="string" translate="true">Change Order Status</item>
+                            <item name="message" xsi:type="string" translate="true">Are you sure you want to change status to On Hold?</item>
+                        </item>
+                    </item>
+                </argument>
+            </action>
+            <action name="change_status_payment_review">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="type" xsi:type="string">change_status_payment_review</item>
+                        <item name="label" xsi:type="string" translate="true">Status: Payment Review</item>
+                        <item name="url" xsi:type="url" path="magoarab_mass/order/massChangeStatus">
+                            <param name="status">payment_review</param>
+                        </item>
+                        <item name="confirm" xsi:type="array">
+                            <item name="title" xsi:type="string" translate="true">Change Order Status</item>
+                            <item name="message" xsi:type="string" translate="true">Are you sure you want to change status to Payment Review?</item>
+                        </item>
+                    </item>
+                </argument>
+            </action>
+            <action name="change_status_fraud">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="type" xsi:type="string">change_status_fraud</item>
+                        <item name="label" xsi:type="string" translate="true">Status: Suspected Fraud</item>
+                        <item name="url" xsi:type="url" path="magoarab_mass/order/massChangeStatus">
+                            <param name="status">fraud</param>
+                        </item>
+                        <item name="confirm" xsi:type="array">
+                            <item name="title" xsi:type="string" translate="true">Change Order Status</item>
+                            <item name="message" xsi:type="string" translate="true">Are you sure you want to change status to Suspected Fraud?</item>
+                        </item>
+                    </item>
+                </argument>
+            </action>
+        </massaction>
+    </listingToolbar>
+</listing>

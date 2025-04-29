@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package   MagoArab_HideMassActions
+ * @author    MagoArab
+ * @copyright Copyright (c) 2025 MagoArab (https://www.magoarab.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Sales::sales">
+                    <resource id="Magento_Sales::sales_operation">
+                        <resource id="Magento_Sales::sales_order">
+                            <resource id="MagoArab_HideMassActions::mass_actions" title="Mass Order Actions Control" sortOrder="50">
+                                <!-- Mageplaza Mass Actions -->
+                                <resource id="MagoArab_HideMassActions::change_status" title="Change Order Status" sortOrder="10" />
+                                <resource id="MagoArab_HideMassActions::create_invoice" title="Create Invoice" sortOrder="20" />
+                                <resource id="MagoArab_HideMassActions::create_shipment" title="Create Shipment" sortOrder="30" />
+                                <resource id="MagoArab_HideMassActions::invoice_shipment" title="Create Invoice and Shipment" sortOrder="40" />
+                                <resource id="MagoArab_HideMassActions::order_comment" title="Add Order Comments" sortOrder="50" />
+                                <resource id="MagoArab_HideMassActions::send_tracking" title="Send Tracking Information" sortOrder="60" />
+                                
+                                <!-- Magento Default Actions -->
+                                <resource id="MagoArab_HideMassActions::cancel" title="Cancel" sortOrder="70" />
+                                <resource id="MagoArab_HideMassActions::hold" title="Hold" sortOrder="80" />
+                                <resource id="MagoArab_HideMassActions::unhold" title="Unhold" sortOrder="90" />
+                                <resource id="MagoArab_HideMassActions::print_invoices" title="Print Invoices" sortOrder="100" />
+                               <resource id="MagoArab_HideMassActions::print_packing_slips" title="Print Packing Slips" sortOrder="110" />
+                                <resource id="MagoArab_HideMassActions::print_credit_memos" title="Print Credit Memos" sortOrder="120" />
+                                <resource id="MagoArab_HideMassActions::print_all" title="Print All" sortOrder="130" />
+                                <resource id="MagoArab_HideMassActions::print_shipping_labels" title="Print Shipping Labels" sortOrder="140" />
+                                
+                                <!-- Order Status Actions -->
+                                <resource id="MagoArab_HideMassActions::status_control" title="Control Order Statuses" sortOrder="150">
+                                    <resource id="MagoArab_HideMassActions::status_pending" title="Status: Pending" sortOrder="10" />
+                                  <resource id="MagoArab_HideMassActions::status_processing" title="Status: Processing" sortOrder="20" />
+                                    <resource id="MagoArab_HideMassActions::status_complete" title="Status: Complete" sortOrder="30" />
+                                    <resource id="MagoArab_HideMassActions::status_closed" title="Status: Closed" sortOrder="40" />
+                                    <resource id="MagoArab_HideMassActions::status_canceled" title="Status: Canceled" sortOrder="50" />
+                                    <resource id="MagoArab_HideMassActions::status_holded" title="Status: On Hold" sortOrder="60" />
+                                    <resource id="MagoArab_HideMassActions::status_payment_review" title="Status: Payment Review" sortOrder="70" />
+                                   <resource id="MagoArab_HideMassActions::status_fraud" title="Status: Suspected Fraud" sortOrder="80" />
+                         <!-- Custom Direct Actions -->
+<resource id="MagoArab_HideMassActions::status_preparingb_action" title="Action: طباعة" sortOrder="145" />
+<resource id="MagoArab_HideMassActions::status_preparinga_action" title="Action: جاري الشحن" sortOrder="146" />
+<resource id="MagoArab_HideMassActions::status_deliveredtodayc_action" title="Action: تم الشحن اليوم" sortOrder="147" />
+                                    <resource id="MagoArab_HideMassActions::status_other" title="Other Custom Statuses" sortOrder="100" />
+                                </resource>
+                            </resource>
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

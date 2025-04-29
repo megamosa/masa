@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package   MagoArab_HideMassActions
+ * @author    MagoArab
+ * @copyright Copyright (c) 2025 MagoArab (https://www.magoarab.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="MagoArab_HideMassActions" setup_version="1.0.0">
+        <sequence>
+            <module name="Mageplaza_MassOrderActions"/>
+        </sequence>
+    </module>
+</config>

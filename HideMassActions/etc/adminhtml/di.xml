@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package   MagoArab_HideMassActions
+ * @author    MagoArab
+ * @copyright Copyright (c) 2025 MagoArab (https://www.magoarab.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Plugin to filter Mageplaza mass actions based on permissions -->
+    <type name="Mageplaza\MassOrderActions\Plugin\Component\MassAction">
+        <plugin name="magoarab_hidemassactions_plugin" 
+                type="MagoArab\HideMassActions\Plugin\MassOrderActionsPermissionPlugin" 
+                sortOrder="10" />
+    </type>
+   <!-- Plugin for Mageplaza column actions in grid -->
+    <type name="Mageplaza\MassOrderActions\Ui\Component\Listing\Column\ViewAction">
+        <plugin name="magoarab_hidemassactions_viewaction_plugin" 
+                type="MagoArab\HideMassActions\Plugin\ViewActionPermissionPlugin" 
+                sortOrder="10" />
+    </type>
+   <!-- Plugin for Magento core mass actions -->
+    <type name="Magento\Sales\Ui\Component\Control\MassAction">
+        <plugin name="magoarab_hidemassactions_core_plugin" 
+                type="MagoArab\HideMassActions\Plugin\MagentoCoreActionsPermissionPlugin" 
+                sortOrder="10" />
+    </type> 
+    <!-- Plugin for Order Status filtering in dropdown -->
+<type name="Mageplaza\MassOrderActions\Plugin\Component\MassAction">
+    <plugin name="magoarab_hidemassactions_orderstatus_plugin" 
+            type="MagoArab\HideMassActions\Plugin\OrderStatusFilterPlugin" 
+            sortOrder="0" />
+</type>
+<!-- Plugin for Custom Actions -->
+<type name="Magento\Ui\Component\MassAction">
+    <plugin name="add_custom_status_mass_actions"
+            type="MagoArab\HideMassActions\Plugin\AddCustomMassStatusActions"
+            sortOrder="10" />
+</type>
+<type name="Magento\Ui\Component\MassAction">
+    <plugin name="magoarab_status_actions_filter_plugin" 
+            type="MagoArab\HideMassActions\Plugin\StatusActionsPlugin" 
+            sortOrder="-100" />
+</type>
+</config>
+
